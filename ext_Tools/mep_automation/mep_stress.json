@@ -1,0 +1,78 @@
+{
+    "camera_resolution": {
+            "720p 16:9"  : 0,
+            "576p 16:9"  : 1,
+            "448p 16:9"  : 2,
+            "360p 16:9"  : 3,
+            "960p 4:3"   : 4,
+            "720p 4:3"   : 5,
+            "600p 4:3"   : 6,
+            "480p 4:3"   : 7,
+            "544p 30:17" : 8,
+            "656p 74:41" : 9,
+            "480p 9:5"   : 10,
+            "416p 47:26" : 11
+    },
+    "mep_stress": [
+        {
+            "app": "WindowsCamera",
+			"path": "",
+			"resolution": "",
+            "function": "video_recording",
+            "screenshot": "False",
+			"sub_tests":["Automatic framing", "Eye contact", "Background effects"],
+            "interval": 30,
+            "loopCnt": 10
+        },        
+		{
+            "app": "WindowsCamera",
+            "path": "",
+            "resolution": "720p 16:9",
+            "function": "mep_toggle",
+            "screenshot": "True",
+            "sub_tests":["Automatic framing"],
+            "interval": 1,
+            "loopCnt": 20
+        },
+        {
+            "app": "WindowsCamera",
+            "path": "",
+            "resolution": "720p 16:9",
+            "function": "mep_toggle",
+            "screenshot": "True",
+            "sub_tests":["Eye contact"],
+            "interval": 1,
+            "loopCnt": 20
+        },
+        {
+            "app": "WindowsCamera",
+	    "path": "",
+            "resolution": "720p 16:9",
+            "function": "mep_toggle",
+            "screenshot": "True",
+            "sub_tests":["Background effects"],
+            "interval": 1,
+            "loopCnt": 20
+        },
+        {
+            "app": "WindowsCamera",
+            "path": "",
+            "resolution": "",
+            "function": "mep_toggle",
+            "screenshot": "True",
+            "sub_tests":["Automatic framing", "Eye contact", "Background effects"],
+            "interval": 1,
+            "loopCnt": 20
+        },		
+        {
+            "app": "WindowsSettings",
+            "path": "ms-settings:camera",
+            "resolution": "",
+            "function": "mep_toggle",
+            "screenshot": "True",
+            "sub_tests":["Automatic framing", "Eye contact", "Background effects"],
+            "interval": 1,
+            "loopCnt": 20
+        }
+    ]
+}
